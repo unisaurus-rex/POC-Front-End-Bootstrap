@@ -21,9 +21,9 @@ gulp
 #Access the webpage
 
 Url to the webpage
-```
-https://unisaurus-rex.github.io/POC-Front-End-Bootstrap/public/
-```
+
+>https://unisaurus-rex.github.io/POC-Front-End-Bootstrap/public/
+
 
 The default branch is __gh-pages__ (the new master)
 ###All pull requests and merges will be for the gh-pages branch.
