@@ -1,5 +1,5 @@
 var gulp = require('gulp'), 
-    sass = require('gulp-ruby-sass') 
+    sass = require('gulp-sass') 
     notify = require("gulp-notify") 
     bower = require('gulp-bower');
 
@@ -24,7 +24,7 @@ gulp.task('css', function() { 
              style: 'compressed',
              loadPath: [
                  './resources/sass',
-                 config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
+                 config.bowerDir + '/bootstrap-sass/assets/stylesheets',
                  config.bowerDir + '/fontawesome/scss',
              ]
          }) 
