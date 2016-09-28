@@ -19,8 +19,8 @@ gulp.task('icons', function() { 
 });
 
 gulp.task('js', function(){
-    return gulp.src(config.bowerDir + '/jquery/dist/jquery.min.js',
-                    config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+    return gulp.src([config.bowerDir + '/jquery/dist/jquery.min.js',
+                    config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js'])
         .pipe(gulp.dest('./public/js'));
 });
 
