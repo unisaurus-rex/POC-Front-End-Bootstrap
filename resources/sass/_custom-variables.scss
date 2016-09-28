@@ -6,16 +6,19 @@ $bootstrap-sass-asset-helper: false !default;
 
 //== Colors
 //
-//## Vantiv brand colors
 
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-base:              #000 !default; // not Vantiv brand color
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222 not Vantiv brand color
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee not Vantiv brand color
+
+// Vantiv brand colors
+
 $gray-dark:              #4D4F53 !default;
 $gray:                   #8B8C8D !default;
 $gray-light:             #E5E5E5 !default;
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #2C2C2C !default; // #337ab7
+
+$brand-primary:         #2C2C2C !default;
 $brand-success:         #40C1AC !default;
 $brand-info:            #00A9E0 !default;
 $brand-warning:         #FED100 !default;
@@ -332,7 +335,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         20px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -355,7 +358,7 @@ $container-desktop:            (940px + $grid-gutter-width) !default;
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (1181px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 

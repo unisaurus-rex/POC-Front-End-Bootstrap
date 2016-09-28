@@ -2,6 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
 $font-family-base: 'Raleway', sans-serif;
 
+
+
 // Import bootstrap and fontawesome
 @import "custom-variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -23,4 +25,14 @@ $font-family-base: 'Raleway', sans-serif;
 
 .content-container {
   //background: $light-gray;
+}
+
+.panel { //!!!!!!!need to clean up and make modular later!!!!
+  margin: 20px 0 0 10px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, -0.95);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 15px;
 }
