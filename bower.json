@@ -1,9 +1,9 @@
 {
-  "name": "gulp-bower-bootstrap-fontawesome",
+  "name": "POC-Front-End-Boostrap",
   "version": "0.0.0",
-  "homepage": "https://github.com/ericbarnes/gulp-bower-bootstrap-fontawesome",
+  "homepage": "https://github.com/unisaurus-rex/POC-Front-End-Bootstrap",
   "authors": [
-    "Eric Barnes <eric@ericlbarnes.com>"
+    "Team Unisaurus-rex"
   ],
   "license": "MIT",
   "ignore": [

@@ -18,6 +18,12 @@ gulp.task('icons', function() { 
         .pipe(gulp.dest('./public/fonts')); 
 });
 
+gulp.task('js', function(){
+    return gulp.src(config.bowerDir + '/jquery/dist/jquery.min.js',
+                    config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+        .pipe(gulp.dest('./public/js'));
+});
+
 gulp.task('css', function() { 
     return gulp.src(config.sassPath + '/style.scss')
          .pipe(sass({
@@ -39,4 +45,4 @@ gulp.task('css', function() { 
      gulp.watch(config.sassPath + '/**/*.scss', ['css']); 
 });
 
-  gulp.task('default', ['bower', 'icons', 'css']);
+  gulp.task('default', ['bower', 'icons', 'js', 'css']);
