@@ -3,6 +3,7 @@
     "gulp": "^3.8.11",
     "gulp-bower": "0.0.10",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }

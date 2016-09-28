@@ -1,12 +1,13 @@
 var gulp = require('gulp'), 
-    sass = require('gulp-sass') 
-    notify = require("gulp-notify") 
+    sass = require('gulp-sass') ,
+    sourcemaps = require('gulp-sourcemaps'),
+    notify = require("gulp-notify") ,
     bower = require('gulp-bower');
 
 var config = {
      sassPath: './resources/sass',
      bowerDir: './bower_components' 
-}
+};
 
 gulp.task('bower', function() { 
     return bower()
@@ -26,18 +27,20 @@ gulp.task('js', function(){
 
 gulp.task('css', function() { 
     return gulp.src(config.sassPath + '/style.scss')
-         .pipe(sass({
-             style: 'compressed',
-             loadPath: [
-                 './resources/sass',
-                 config.bowerDir + '/bootstrap-sass/assets/stylesheets',
-                 config.bowerDir + '/fontawesome/scss',
-             ]
-         }) 
-            .on("error", notify.onError(function (error) {
-                 return "Error: " + error.message;
-             }))) 
-         .pipe(gulp.dest('./public/css')); 
+         .pipe(sourcemaps.init({loadMaps: true}))
+            .pipe(sass({
+                 style: 'compressed',
+                 loadPath: [
+                     './resources/sass',
+                     config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+                     config.bowerDir + '/fontawesome/scss',
+                 ]
+             }) 
+                .on("error", notify.onError(function (error) {
+                     return "Error: " + error.message;
+                 }))) 
+         .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./public/css')); 
 });
 
 // Rerun the task when a file changes
